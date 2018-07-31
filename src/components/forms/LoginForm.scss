@@ -1,0 +1,141 @@
+.login-wrapper {
+    width: 100%;
+    height: 100vh;
+    background: #40a4c4;    
+    background-image: url(https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-527788.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+        height: 200vh;
+    }
+}
+
+.mask {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(64, 164, 196, .4);
+    display: flex;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: landscape) {
+        height: 200vh;
+    }
+}
+
+.login-form {
+    margin: auto;
+    padding: 15px;
+    
+    & > h1 {
+        text-align: center;
+        font-weight: 400;
+        width: 400px;
+        padding: 30px;
+
+        & > span {
+            color: #fff;
+        }
+
+        @media screen and (max-width: 550px) {
+            width: 70%;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+        padding: 5px;
+    }
+}
+
+.login-form--field {
+    display: block;
+    margin: 10px auto;
+    width: calc(100% - 20px);
+
+    @media screen and (max-width: 550px) {
+        padding: 5px;
+    }
+}
+
+.login-form--field--label {
+    padding-left: 5px;
+    font-size: 14px;
+
+    & > span {
+        color: #FF4040;
+        font-weight: 700;
+        font-size: 10px;
+    }
+}
+
+.login-form--field--input-error,
+.login-form--field--input {
+    height: 30px;
+    width: calc(100% - 20px);
+    outline: none;
+    font-size: 14px;
+    padding: 0 10px;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.4s all ease;
+}
+            
+.login-form--field--input-error {
+    border-bottom: 2px solid #FF4040;
+}
+
+.login-form--field--input:focus,
+.login-form--field--input-error:focus {
+    border-bottom: 2px solid #515151;
+}
+
+.login-form--field--textarea-error,
+.login-form--field--textarea {
+    max-width: 100%;
+    resize: vertical;
+    max-height: 200px;
+    min-height: 100px;
+    width: calc(100% - 20px);
+    outline: none;
+    font-size: 14px;
+    padding: 0 10px;
+    border: 0;
+    border-bottom: 2px solid #fff;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.4s all ease-in-out;
+
+    @media screen and (max-width: 550px) {
+        max-height: 50px;
+        min-height: 50px;
+    }
+}
+
+.login-form--field--textarea-error {
+    border-bottom: 2px solid #FF4040;
+}
+
+.login-form--field--textarea:focus,
+.login-form--field--textarea-error:focus {
+    border-bottom: 2px solid #515151;
+}
+
+.login-form--field--submit-button {
+    display: block;
+    padding: 10px 70px 10px 70px;
+    border: 2px solid #fff;
+    font-size: 14px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    outline: none;
+    margin: 30px auto;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+.login-form--field--submit-button:hover {
+    background-color: rgba(255, 255, 255, .15);
+}

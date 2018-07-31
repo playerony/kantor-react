@@ -1,0 +1,55 @@
+.modal-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(26, 26, 26, .6);
+    display: flex;
+    overflow: hidden;
+}
+
+.modal {
+    width: 500px;
+    height: 300px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin: auto;
+    padding: 30px;
+
+    & > h2 {
+        font-weight: 700;
+        font-size: 50px;
+        text-align: center;
+        padding: 10px;
+
+        @media screen and (max-width: 550px) {
+            font-size: 30px;
+        }
+    }
+
+    & > h3 {
+        font-size: 24px;
+        text-align: center;
+        font-weight: 400;
+
+        @media screen and (max-width: 550px) {
+            font-size: 16px;
+        }
+    }
+}
+
+.modal--error {
+    font-size: 110px;
+    font-weight: 600;
+    color: #FF4040;
+    border: 10px solid rgba(255, 64, 64, .3);
+    width: 135px;
+    text-align: center;
+    border-radius: 100px;
+    padding-bottom: 5px;
+    position: relative;
+    top: 10px;
+    left: calc(50% - 85px);
+}
